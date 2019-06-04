@@ -1,0 +1,6 @@
+_extends: .github
+repository:
+  name: eslint-config-mocha
+  description: Shareable config for ESLint for Mocha tests
+  homepage: 'https://npm.im/@travi/eslint-config-mocha'
+  private: false
