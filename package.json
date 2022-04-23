@@ -31,6 +31,6 @@
     "remark-preset-lint-travi": "3.0.0"
   },
   "dependencies": {
-    "@form8ion/eslint-config-mocha": "1.2.16"
+    "@form8ion/eslint-config-mocha": "2.0.1"
   }
 }
