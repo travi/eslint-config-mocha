@@ -3,22 +3,28 @@
   "description": "Shareable config for ESLint for Mocha tests",
   "license": "MIT",
   "version": "0.0.0-semantically-released",
-  "files": [
-    "index.js"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "repository": "travi/eslint-config-mocha",
   "bugs": "https://github.com/travi/eslint-config-mocha/issues",
   "homepage": "https://npm.im/@travi/eslint-config-mocha",
-  "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "scripts": {
     "test": "npm-run-all --print-label --parallel lint:*",
     "lint:js": "eslint .",
     "lint:md": "remark . --frail",
     "lint:peer": "npm ls >/dev/null",
-    "lint:sensitive": "ban"
+    "lint:sensitive": "ban",
+    "prepare": "husky install",
+    "lint:publish": "publint --strict"
+  },
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "dependencies": {
+    "@form8ion/eslint-config-mocha": "2.0.3"
   },
   "devDependencies": {
     "@travi/eslint-config": "3.0.36",
@@ -27,10 +33,8 @@
     "cz-conventional-changelog": "3.3.0",
     "husky": "8.0.3",
     "npm-run-all": "4.1.5",
+    "publint": "0.2.0",
     "remark-cli": "11.0.0",
     "remark-preset-lint-travi": "6.0.0"
-  },
-  "dependencies": {
-    "@form8ion/eslint-config-mocha": "2.0.3"
   }
 }
